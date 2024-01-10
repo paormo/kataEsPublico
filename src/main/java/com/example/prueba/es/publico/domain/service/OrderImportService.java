@@ -4,5 +4,5 @@ import java.io.IOException;
 
 public interface OrderImportService {
 
-    void importOrdersAndGenerateCSV() throws IOException;
+    String importOrdersAndGenerateCSV() throws IOException;
 }

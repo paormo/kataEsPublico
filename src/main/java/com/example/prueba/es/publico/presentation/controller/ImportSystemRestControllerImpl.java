@@ -14,7 +14,7 @@ public class ImportSystemRestControllerImpl {
     private final OrderImportService orderImportService;
     @PostMapping("/orders-summary")
     public String ordersSummary() throws IOException {
-        orderImportService.importOrdersAndGenerateCSV();
-        return "Import complete, and CSV generated.";
+        String csvPath = orderImportService.importOrdersAndGenerateCSV();
+        return "Import complete, and \"result.csv\" CSV generated in: " + csvPath;
     }
 }

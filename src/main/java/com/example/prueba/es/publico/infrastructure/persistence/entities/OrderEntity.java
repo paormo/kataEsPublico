@@ -16,10 +16,6 @@ import java.util.UUID;
 public class OrderEntity {
 
     @Id
-    @Column(name="id_pk")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqGen")
-    @SequenceGenerator(name = "seqGen", sequenceName = "seq")
-    private Integer idPK;
     @Column(name="id")
     private Integer id;
     @Column(name="uuid")

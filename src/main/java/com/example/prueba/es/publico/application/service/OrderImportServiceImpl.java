@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -58,9 +59,10 @@ public class OrderImportServiceImpl implements OrderImportService {
     private static final BufferedWriter bufferedWriter ;
 
     @Override
-    public void importOrdersAndGenerateCSV() throws IOException {
+    public String importOrdersAndGenerateCSV() throws IOException {
         importFromAPIToPersistence();
         generateOrdersCSV();
+        return new File("").getAbsolutePath();
     }
 
     static {
